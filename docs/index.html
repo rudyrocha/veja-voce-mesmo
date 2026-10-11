@@ -1,34 +1,59 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Veja você mesmo — Compêndios para investigar fatos</title>
-<meta name="description" content="Compêndios com fontes, evidências e contrapontos para investigar fatos da política e fazer perguntas mais criteriosas às IAs.">
-<style>
-:root{color-scheme:light;--ink:#162d36;--accent:#146451;--paper:#f6f5ef;--line:#d7ded7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,sans-serif;line-height:1.65}
-a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:3px solid #9b6200;outline-offset:5px}
-header,main,footer{max-width:1080px;margin:auto;padding:24px}
-header{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}
-.brand{font-weight:800;text-decoration:none;color:var(--ink)}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:.93rem}
-.hero{padding:65px 0 45px;max-width:850px}.eyebrow{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:700}
-h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.08;letter-spacing:-.045em;margin:18px 0 24px}
-.lead{font-size:1.2rem;max-width:690px}.notice{border-left:4px solid var(--accent);padding:14px 22px;background:#e8eee7;max-width:760px}
-section{padding:32px 0;border-top:1px solid var(--line);scroll-margin-top:24px}h2{font-size:1.8rem;letter-spacing:-.025em}h3{font-size:1.12rem}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:12px;padding:24px}
-.empty{padding:28px;background:white;border:1px dashed #94aa9d;border-radius:12px}
-blockquote{margin:20px 0;padding:22px;background:white;border:1px solid var(--line);border-radius:12px}
-footer{border-top:1px solid var(--line);font-size:.9rem;padding-bottom:40px}
-@media(max-width:700px){header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.hero{padding-top:36px}header,main,footer{padding-left:20px;padding-right:20px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compêndios com fontes, argumentos e contrapontos para pesquisar política com a IA de sua preferência.">
+  <title>Veja você mesmo — Pergunte melhor. Investigue os fatos.</title>
+  <style>
+    :root{--ink:#183138;--muted:#476169;--green:#126854;--line:#d9e2df;--paper:#f6f7f2;--pale:#e8f1eb}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.62 system-ui,-apple-system,Segoe UI,sans-serif}
+    a{color:var(--green);text-underline-offset:.2em}a:focus-visible,button:focus-visible{outline:3px solid #9b6300;outline-offset:4px}
+    header,main,footer{max-width:1060px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:22px;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;text-decoration:none;color:var(--ink)}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:.93rem}
+    .hero{max-width:850px;padding:74px 0 62px}.eyebrow{color:var(--green);font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;font-weight:800}
+    h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.05;letter-spacing:-.045em;margin:16px 0 24px}h2{font-size:clamp(1.55rem,3vw,2rem);line-height:1.2}h3{font-size:1.15rem}
+    .lead{font-size:1.24rem;line-height:1.5}.intro{max-width:750px}.notice{border-left:4px solid var(--green);padding:14px 20px;background:var(--pale);margin-top:26px}
+    section{padding:36px 0;border-top:1px solid var(--line);scroll-margin-top:24px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{padding:25px;background:#fff;border:1px solid var(--line);border-radius:12px}.card h3{margin-top:0}.button{display:inline-block;background:var(--green);color:#fff;padding:11px 17px;border-radius:8px;text-decoration:none;font-weight:700}.button:hover{background:#0d4b3d}
+    .secondary{display:inline-block;padding:11px 16px;margin-left:8px;border:1px solid var(--green);border-radius:8px;text-decoration:none;font-weight:700}
+    ol{padding-left:1.35rem}li{margin:.55rem 0}footer{border-top:1px solid var(--line);font-size:.9rem;color:var(--muted);padding-bottom:44px}
+    @media(max-width:700px){header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.hero{padding-top:34px}header,main,footer{padding-left:20px;padding-right:20px}.secondary{margin:9px 0 0}}
+  </style>
 </head>
 <body>
-<header><a class="brand" href="./">Veja você mesmo</a><nav aria-label="Navegação principal"><a href="#compendios">Compêndios</a><a href="#metodo">Critérios</a><a href="#usar">Usar com IA</a><a href="https://github.com/rudyrocha/veja-voce-mesmo">Repositório</a></nav></header>
-<main>
-<div class="hero"><p class="eyebrow">Fontes · Evidências · Contrapontos</p><h1>Investigue os fatos.<br>Examine os argumentos.</h1><p class="lead">Compêndios sobre política para apoiar a leitura crítica, conferir evidências e formular perguntas melhores — inclusive às inteligências artificiais.</p><p class="notice">Nenhum compêndio deve ser tratado como fonte absoluta da verdade. Consulte as referências, examine as limitações e confronte as conclusões com outras evidências.</p></div>
-<section id="compendios"><h2>Compêndios</h2><div class="empty"><h3>Acervo em preparação</h3><p>Ainda não há compêndios publicados nesta versão. Os documentos serão incluídos após recuperação e revisão de seu conteúdo e de suas referências.</p></div></section>
-<section id="metodo"><h2>Como examinar cada compêndio</h2><div class="grid"><article class="card"><h3>Confira as fontes</h3><p>Identifique a origem das informações, a data dos documentos e o trecho que sustenta cada afirmação relevante.</p></article><article class="card"><h3>Separe os tipos de afirmação</h3><p>Distinga fatos documentados, interpretações, hipóteses e opiniões. Observe o que continua incerto.</p></article><article class="card"><h3>Teste os argumentos</h3><p>Considere as objeções relevantes, a qualidade das evidências e as explicações alternativas. Não presuma que todos os argumentos têm o mesmo respaldo.</p></article></div><p><a href="criterios.md">Ler os critérios editoriais em Markdown</a></p></section>
-<section id="usar"><h2>Use o conteúdo para questionar sua IA</h2><ol><li>Leia o compêndio e confira sua data e suas limitações.</li><li>Baixe o arquivo e anexe-o à IA que você utiliza.</li><li>Peça que ela diferencie o conteúdo do documento das informações verificadas em outras fontes.</li><li>Abra as referências citadas e confira se elas sustentam a resposta.</li></ol><p>Uma pergunta inicial possível:</p><blockquote>Analise o compêndio anexado como material de apoio. Distinga fatos documentados, interpretações e opiniões. Identifique lacunas, argumentos frágeis e contrapontos relevantes. Indique quais afirmações precisam de verificação externa. Quando houver acesso à internet, confira as fontes originais e informe as datas. Não invente referências e diga quando não tiver informação suficiente.</blockquote><p>Uma IA pode produzir respostas incorretas mesmo ao receber um documento criterioso. O compêndio ajuda a investigar; a verificação das fontes continua necessária.</p></section>
-<section id="correcoes"><h2>Encontrou um erro ou uma fonte melhor?</h2><p><a href="https://github.com/rudyrocha/veja-voce-mesmo/issues">Abra uma questão no repositório</a>, indicando o documento, o trecho, a correção sugerida e a fonte que a sustenta. Para abrir uma questão, é necessário entrar em uma conta do GitHub.</p></section>
-</main><footer>Veja você mesmo · Versão inicial do ambiente · <a href="https://github.com/rudyrocha/veja-voce-mesmo">Arquivos e histórico de alterações</a></footer>
-</body></html>
+  <header><a class="brand" href="./">Veja você mesmo</a><nav aria-label="Navegação principal"><a href="#compendios">Compêndios</a><a href="#metodo">Como pesquisar</a><a href="#correcoes">Correções</a><a href="https://github.com/rudyrocha/veja-voce-mesmo">Repositório</a></nav></header>
+  <main>
+    <div class="hero">
+      <p class="eyebrow">Fontes · Perguntas · Investigação</p>
+      <h1>Pergunte melhor.<br>Veja você mesmo.</h1>
+      <p class="lead intro">Não escolhemos seu voto nem pedimos que aceite nossa versão dos fatos. Reunimos fontes, argumentos e perguntas para você investigar com a IA de sua preferência. Confira as evidências, confronte respostas e forme seu próprio juízo.</p>
+      <p class="notice">Os compêndios têm conclusões, limites e pontos em aberto. São pontos de partida para sua pesquisa, não autoridades finais.</p>
+    </div>
+    <section id="compendios">
+      <h2>Compêndios</h2>
+      <article class="card">
+        <p class="eyebrow">CP-01 · Atualizado em 11/10/2026 · Versão 0.5.1</p>
+        <h3>Tentativa de golpe no Brasil em 2022–2023</h3>
+        <p>Examine a atuação atribuída a Jair Bolsonaro, as provas, as objeções jurídicas, as penas e os limites do que foi verificado. A página inclui uma pergunta central e um prompt para pesquisar na sua IA favorita.</p>
+        <a class="button" href="compendios/tentativa-de-golpe-2022-2023.html">Ler e investigar</a>
+        <a class="secondary" href="compendios/CP-01_Tentativa_de_golpe_Brasil_2022-2023.md" download>Baixar Markdown</a>
+      </article>
+    </section>
+    <section id="metodo">
+      <h2>Como pesquisar com critério</h2>
+      <div class="grid">
+        <article class="card"><h3>1. Leia a pergunta</h3><p>Use uma questão específica. Assim você pode comparar as respostas obtidas em IAs diferentes.</p></article>
+        <article class="card"><h3>2. Confira as fontes</h3><p>Peça documentos originais, datas e trechos pertinentes. Uma mesma prova reproduzida em vários textos não vira várias provas.</p></article>
+        <article class="card"><h3>3. Teste a conclusão</h3><p>Examine a melhor objeção, identifique o que permanece incerto e decida se as evidências sustentam a resposta.</p></article>
+      </div>
+      <p><a href="criterios.md">Leia os critérios editoriais completos</a>.</p>
+    </section>
+    <section id="correcoes">
+      <h2>Encontrou um erro?</h2>
+      <p><a href="https://github.com/rudyrocha/veja-voce-mesmo/issues">Abra uma questão no repositório</a> com o trecho, a correção proposta e uma fonte verificável. Para enviar, é necessária uma conta no GitHub.</p>
+    </section>
+  </main>
+  <footer>Veja você mesmo · <a href="https://github.com/rudyrocha/veja-voce-mesmo">Arquivos e histórico de alterações</a></footer>
+</body>
+</html>
