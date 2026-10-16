@@ -1,6 +1,7 @@
-# Compêndios
+# Material histórico
 
-- [CP-01 — Tentativa de golpe no Brasil em 2022–2023](tentativa-de-golpe-2022-2023.html): página de leitura e prompt copiável.
-- [CP-01 em Markdown](CP-01_Tentativa_de_golpe_Brasil_2022-2023.md): arquivo estável para download e uso com IA. A versão consta no seu conteúdo, sem integrar o nome.
+Desde 16/10/2026, o Veja você mesmo oferece perguntas e prompts autossuficientes para pesquisa direta nas fontes, sem depender de compêndios.
 
-O texto apresenta evidências, argumentos contrários, críticas ao julgamento e limites da pesquisa. Consulte as fontes originais para avaliar as conclusões.
+Os arquivos Markdown desta pasta são material histórico. Não integram os prompts atuais. O endereço HTML anterior encaminha à nova página da investigação.
+
+Acesse a investigação atual: https://rudyrocha.github.io/veja-voce-mesmo/investigacoes/tentativa-de-golpe-2022-2023.html
