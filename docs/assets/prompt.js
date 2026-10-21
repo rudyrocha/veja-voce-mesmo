@@ -13,6 +13,7 @@ if (field) {
           if (!document.execCommand('copy')) throw new Error('copy failed');
         }
         if (status) status.textContent = 'Prompt completo copiado. Confira o texto ao colar na sua IA.';
+        document.dispatchEvent(new Event('prompt-copied'));
       } catch {
         field.focus();
         field.select();
